@@ -1,0 +1,159 @@
+diff --git a/api/api.py b/api/api.py
+index 2ecdd3f..83595d6 100755
+--- a/api/api.py
++++ b/api/api.py
+@@ -15,6 +15,9 @@ import urllib
+ import json
+ 
+ ACCESS_URL = "http://live.66boss.com/livepic/"
++STORE_PATH="/live/www/html/applylive/"
++ACCESS_PATH="http://live.66boss.com/applylive/"
++
+ class QueryHandler(tornado.web.RequestHandler):
+     def get(self):
+         results = list()
+@@ -196,7 +199,72 @@ class StopHandler(tornado.web.RequestHandler):
+ 
+         self.write("OK")
+ 
++def getFileName():
++    source = list(string.lowercase) 
++    random.shuffle(source)
++    temp = source[:15]
++    return "".join(temp)
++
++class UploadFileHandler(tornado.web.RequestHandler):
++    def get(self):
++        self.write('''
++<html>
++  <head><title>Upload File</title></head>
++  <body>
++    <form action='upload' enctype="multipart/form-data" method='post'>
++    <input type='file' name='file'/><br/>
++    <input type='submit' value='submit'/>
++    </form>
++  </body>
++</html>
++''')
++
++    def post(self):
++        file_metas = self.request.files['file']   
++        for meta in file_metas:
++            suffix = os.path.splitext(meta['filename'])[1]
++            filename = getFileName() + suffix
++            filepath = os.path.join(STORE_PATH, filename)
++            with open(filepath,'wb') as up:
++                up.write(meta['body'])
++            self.write(ACCESS_PATH + filename)
++
++class ApplyLiveHandler(tornado.web.RequestHandler):
++    def get(self):
++        result = dict()
++        result['message'] = "OK"
++        result['code'] = 0
++
++        userid = self.get_arguments("userid", strip=True)
++        name = self.get_arguments("name", strip=True)
++        gender = self.get_arguments("gender", strip=True)
++        idc = self.get_arguments("idc", strip=True)
++        image = self.get_arguments("image", strip=True)
++
++        try:
++            userid = userid[0]
++            idc = idc[0]
++            name = name[0].encode("utf-8")
++            gender = gender[0].encode("utf-8")
++            image = ACCESS_PATH + image[0]
++            mysql.ApplyLive(userid, name, gender, idc, image)
++        except:
++            result['message'] = "parameter error"
++            result['code'] = 1
+ 
++        self.write(cjson.encode(result))
++
++class HasLiveHandler(tornado.web.RequestHandler):
++    def get(self):
++        result = dict()
++        userid = self.get_arguments("userid", strip=True)
++
++        try:
++            result = mysql.HasLive(userid[0])
++        except:
++            result['message'] = "parameter error"
++            result['code'] = 1
++        self.write(cjson.encode(result))
+ 
+ application = tornado.web.Application([
+     (r"/query", QueryHandler),
+@@ -208,6 +276,9 @@ application = tornado.web.Application([
+     (r"/create", CreateHandler),
+     (r"/products", ProductHandler),
+     (r"/stop", StopHandler),
++    (r'/upload',UploadFileHandler),
++    (r'/haslive', HasLiveHandler),
++    (r'/applylive', ApplyLiveHandler),
+ ])
+ 
+ if __name__ == "__main__":
+diff --git a/api/mysql.py b/api/mysql.py
+index 327bdfd..171512d 100755
+--- a/api/mysql.py
++++ b/api/mysql.py
+@@ -8,7 +8,7 @@ from DBUtils.PooledDB import PooledDB
+ import dbconfig
+ 
+ 
+-ERROR = {0:"OK", 1:"Parameter Error", 2:"Database Error", 3:u"您已赞"}
++ERROR = {0:"OK", 1:"Parameter Error", 2:"Database Error", 3:u"您已赞", 4:u"你无权开通直播"}
+ Default_Snapshot = "http://7xvsyw.com2.z0.glb.qiniucdn.com/n.jpg"
+ 
+ class DbManager():
+@@ -342,10 +342,41 @@ def SaveProducts(liveid, products):
+     cur.close()
+     con.close()
+ 
++def ApplyLive(userid, name, gender, idc, imageURL):
++    sql = "insert into users values(0, '{0}','{1}', '{2}', '{3}', 0, '{4}')".format(userid, name, gender, idc, imageURL)
++    con = getConn()
++    cur =  con.cursor()
++    cur.execute(sql)
++    con.commit()
++    cur.close()
++    con.close()
++
++def HasLive(userid):
++
++    result = dict()
++    result['code'] =  0
++    result['message'] =  ERROR[0]
++
++    sql = "select userid from users where userid='{0}' and approved=1".format(userid)
++    con = getConn()
++    cur =  con.cursor()
++    cur.execute(sql)
++    res = cur.fetchall()
++    cur.close()
++    con.close()
++    if len(res) == 0:
++        result['code'] =  4
++        result['message'] =  ERROR[4]
++    return result
++
+ if __name__ ==  '__main__':
+     #print Support("z1.mycs.xiechc",11233)
+     import cjson
+ #    print cjson.encode(Products("13"))
+ #    print cjson.encode(Products("1"))
+ #    print Products("b")
+-    SaveProducts("z1.66boss.xiechc",['1','2','3'])
++    #SaveProducts("z1.66boss.xiechc",['1','2','3'])
++    print HasLive('00')
++    a = u"王"
++    b =u"女"
++    ApplyLive("1234", a.encode('utf-8'), b.encode('utf-8'), "133333333333", "afadf.jpg")
+diff --git a/api/mysql.pyc b/api/mysql.pyc
+index 4ea4309..af346a0 100644
+Binary files a/api/mysql.pyc and b/api/mysql.pyc differ
+diff --git a/api/qiniu.pyc b/api/qiniu.pyc
+index 92b5d66..5a823cd 100644
+Binary files a/api/qiniu.pyc and b/api/qiniu.pyc differ

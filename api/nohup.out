@@ -1,0 +1,513 @@
+ERROR:tornado.application:Uncaught exception GET /products?liveid=z1.66boss.ckhmqlzuytaw (127.0.0.1)
+HTTPServerRequest(protocol='http', host='127.0.0.1:8888', method='GET', uri='/products?liveid=z1.66boss.ckhmqlzuytaw', version='HTTP/1.0', remote_ip='127.0.0.1', headers={'Accept-Language': 'zh-Hans;q=1, en;q=0.9', 'Accept-Encoding': 'gzip, deflate', 'Host': '127.0.0.1:8888', 'Accept': '*/*', 'User-Agent': 'SixtySixBoss/1.0 (iPhone; iOS 8.3; Scale/2.00)', 'Connection': 'close'})
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/site-packages/tornado-4.3-py2.7-linux-x86_64.egg/tornado/web.py", line 1401, in _stack_context_handle_exception
+    raise_exc_info((type, value, traceback))
+  File "/usr/lib/python2.7/site-packages/tornado-4.3-py2.7-linux-x86_64.egg/tornado/stack_context.py", line 314, in wrapped
+    ret = fn(*args, **kwargs)
+  File "/usr/lib/python2.7/site-packages/tornado-4.3-py2.7-linux-x86_64.egg/tornado/web.py", line 1613, in future_complete
+    f.result()
+  File "/usr/lib/python2.7/site-packages/tornado-4.3-py2.7-linux-x86_64.egg/tornado/concurrent.py", line 232, in result
+    raise_exc_info(self._exc_info)
+  File "/usr/lib/python2.7/site-packages/tornado-4.3-py2.7-linux-x86_64.egg/tornado/gen.py", line 1014, in run
+    yielded = self.gen.throw(*exc_info)
+  File "./api.py", line 183, in get
+    response = yield client.fetch(URL, method='POST', body=data)
+  File "/usr/lib/python2.7/site-packages/tornado-4.3-py2.7-linux-x86_64.egg/tornado/gen.py", line 1008, in run
+    value = future.result()
+  File "/usr/lib/python2.7/site-packages/tornado-4.3-py2.7-linux-x86_64.egg/tornado/concurrent.py", line 232, in result
+    raise_exc_info(self._exc_info)
+  File "<string>", line 3, in raise_exc_info
+HTTPError: HTTP 599: Timeout
+ERROR:tornado.access:500 GET /products?liveid=z1.66boss.ckhmqlzuytaw (127.0.0.1) 20016.64ms
+ERROR:tornado.application:Uncaught exception GET /products?liveid=z1.66boss.ckhmqlzuytaw (127.0.0.1)
+HTTPServerRequest(protocol='http', host='127.0.0.1:8888', method='GET', uri='/products?liveid=z1.66boss.ckhmqlzuytaw', version='HTTP/1.0', remote_ip='127.0.0.1', headers={'Accept-Language': 'zh-Hans-CN;q=1, en-CN;q=0.9', 'Accept-Encoding': 'gzip, deflate', 'Host': '127.0.0.1:8888', 'Accept': '*/*', 'User-Agent': 'SixtySixBoss/1.0 (iPhone; iOS 9.3.2; Scale/3.00)', 'Connection': 'close'})
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/site-packages/tornado-4.3-py2.7-linux-x86_64.egg/tornado/web.py", line 1401, in _stack_context_handle_exception
+    raise_exc_info((type, value, traceback))
+  File "/usr/lib/python2.7/site-packages/tornado-4.3-py2.7-linux-x86_64.egg/tornado/stack_context.py", line 314, in wrapped
+    ret = fn(*args, **kwargs)
+  File "/usr/lib/python2.7/site-packages/tornado-4.3-py2.7-linux-x86_64.egg/tornado/web.py", line 1613, in future_complete
+    f.result()
+  File "/usr/lib/python2.7/site-packages/tornado-4.3-py2.7-linux-x86_64.egg/tornado/concurrent.py", line 232, in result
+    raise_exc_info(self._exc_info)
+  File "/usr/lib/python2.7/site-packages/tornado-4.3-py2.7-linux-x86_64.egg/tornado/gen.py", line 1014, in run
+    yielded = self.gen.throw(*exc_info)
+  File "./api.py", line 183, in get
+    response = yield client.fetch(URL, method='POST', body=data)
+  File "/usr/lib/python2.7/site-packages/tornado-4.3-py2.7-linux-x86_64.egg/tornado/gen.py", line 1008, in run
+    value = future.result()
+  File "/usr/lib/python2.7/site-packages/tornado-4.3-py2.7-linux-x86_64.egg/tornado/concurrent.py", line 232, in result
+    raise_exc_info(self._exc_info)
+  File "<string>", line 3, in raise_exc_info
+HTTPError: HTTP 599: Timeout
+ERROR:tornado.access:500 GET /products?liveid=z1.66boss.ckhmqlzuytaw (127.0.0.1) 20019.51ms
+ERROR:tornado.application:Uncaught exception GET /products?liveid=z1.66boss.uosrhfqwkztp (127.0.0.1)
+HTTPServerRequest(protocol='http', host='127.0.0.1:8888', method='GET', uri='/products?liveid=z1.66boss.uosrhfqwkztp', version='HTTP/1.0', remote_ip='127.0.0.1', headers={'Accept-Language': 'zh-Hans-CN;q=1', 'Accept-Encoding': 'gzip, deflate', 'Host': '127.0.0.1:8888', 'Accept': '*/*', 'User-Agent': 'SixtySixBoss/1.0 (iPhone; iOS 9.3.2; Scale/3.00)', 'Connection': 'close'})
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/site-packages/tornado-4.3-py2.7-linux-x86_64.egg/tornado/web.py", line 1401, in _stack_context_handle_exception
+    raise_exc_info((type, value, traceback))
+  File "/usr/lib/python2.7/site-packages/tornado-4.3-py2.7-linux-x86_64.egg/tornado/stack_context.py", line 314, in wrapped
+    ret = fn(*args, **kwargs)
+  File "/usr/lib/python2.7/site-packages/tornado-4.3-py2.7-linux-x86_64.egg/tornado/web.py", line 1613, in future_complete
+    f.result()
+  File "/usr/lib/python2.7/site-packages/tornado-4.3-py2.7-linux-x86_64.egg/tornado/concurrent.py", line 232, in result
+    raise_exc_info(self._exc_info)
+  File "/usr/lib/python2.7/site-packages/tornado-4.3-py2.7-linux-x86_64.egg/tornado/gen.py", line 1014, in run
+    yielded = self.gen.throw(*exc_info)
+  File "./api.py", line 183, in get
+    response = yield client.fetch(URL, method='POST', body=data)
+  File "/usr/lib/python2.7/site-packages/tornado-4.3-py2.7-linux-x86_64.egg/tornado/gen.py", line 1008, in run
+    value = future.result()
+  File "/usr/lib/python2.7/site-packages/tornado-4.3-py2.7-linux-x86_64.egg/tornado/concurrent.py", line 232, in result
+    raise_exc_info(self._exc_info)
+  File "<string>", line 3, in raise_exc_info
+HTTPError: HTTP 599: Timeout
+ERROR:tornado.access:500 GET /products?liveid=z1.66boss.uosrhfqwkztp (127.0.0.1) 20021.80ms
+ERROR:tornado.application:Uncaught exception GET /products?liveid=z1.66boss.ckhmqlzuytaw (127.0.0.1)
+HTTPServerRequest(protocol='http', host='127.0.0.1:8888', method='GET', uri='/products?liveid=z1.66boss.ckhmqlzuytaw', version='HTTP/1.0', remote_ip='127.0.0.1', headers={'Accept-Language': 'zh-Hans-CN;q=1, en-CN;q=0.9', 'Accept-Encoding': 'gzip, deflate', 'Host': '127.0.0.1:8888', 'Accept': '*/*', 'User-Agent': 'SixtySixBoss/1.0 (iPhone; iOS 9.3.2; Scale/3.00)', 'Connection': 'close'})
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/site-packages/tornado-4.3-py2.7-linux-x86_64.egg/tornado/web.py", line 1401, in _stack_context_handle_exception
+    raise_exc_info((type, value, traceback))
+  File "/usr/lib/python2.7/site-packages/tornado-4.3-py2.7-linux-x86_64.egg/tornado/stack_context.py", line 314, in wrapped
+    ret = fn(*args, **kwargs)
+  File "/usr/lib/python2.7/site-packages/tornado-4.3-py2.7-linux-x86_64.egg/tornado/web.py", line 1613, in future_complete
+    f.result()
+  File "/usr/lib/python2.7/site-packages/tornado-4.3-py2.7-linux-x86_64.egg/tornado/concurrent.py", line 232, in result
+    raise_exc_info(self._exc_info)
+  File "/usr/lib/python2.7/site-packages/tornado-4.3-py2.7-linux-x86_64.egg/tornado/gen.py", line 1014, in run
+    yielded = self.gen.throw(*exc_info)
+  File "./api.py", line 183, in get
+    response = yield client.fetch(URL, method='POST', body=data)
+  File "/usr/lib/python2.7/site-packages/tornado-4.3-py2.7-linux-x86_64.egg/tornado/gen.py", line 1008, in run
+    value = future.result()
+  File "/usr/lib/python2.7/site-packages/tornado-4.3-py2.7-linux-x86_64.egg/tornado/concurrent.py", line 232, in result
+    raise_exc_info(self._exc_info)
+  File "<string>", line 3, in raise_exc_info
+HTTPError: HTTP 599: Timeout
+ERROR:tornado.access:500 GET /products?liveid=z1.66boss.ckhmqlzuytaw (127.0.0.1) 20005.89ms
+ERROR:tornado.application:Uncaught exception GET /products?liveid=z1.66boss.ckhmqlzuytaw (127.0.0.1)
+HTTPServerRequest(protocol='http', host='127.0.0.1:8888', method='GET', uri='/products?liveid=z1.66boss.ckhmqlzuytaw', version='HTTP/1.0', remote_ip='127.0.0.1', headers={'Accept-Language': 'zh-Hans-CN;q=1, en-CN;q=0.9', 'Accept-Encoding': 'gzip, deflate', 'Host': '127.0.0.1:8888', 'Accept': '*/*', 'User-Agent': 'SixtySixBoss/1.0 (iPhone; iOS 9.3.2; Scale/3.00)', 'Connection': 'close'})
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/site-packages/tornado-4.3-py2.7-linux-x86_64.egg/tornado/web.py", line 1401, in _stack_context_handle_exception
+    raise_exc_info((type, value, traceback))
+  File "/usr/lib/python2.7/site-packages/tornado-4.3-py2.7-linux-x86_64.egg/tornado/stack_context.py", line 314, in wrapped
+    ret = fn(*args, **kwargs)
+  File "/usr/lib/python2.7/site-packages/tornado-4.3-py2.7-linux-x86_64.egg/tornado/web.py", line 1613, in future_complete
+    f.result()
+  File "/usr/lib/python2.7/site-packages/tornado-4.3-py2.7-linux-x86_64.egg/tornado/concurrent.py", line 232, in result
+    raise_exc_info(self._exc_info)
+  File "/usr/lib/python2.7/site-packages/tornado-4.3-py2.7-linux-x86_64.egg/tornado/gen.py", line 1014, in run
+    yielded = self.gen.throw(*exc_info)
+  File "./api.py", line 183, in get
+    response = yield client.fetch(URL, method='POST', body=data)
+  File "/usr/lib/python2.7/site-packages/tornado-4.3-py2.7-linux-x86_64.egg/tornado/gen.py", line 1008, in run
+    value = future.result()
+  File "/usr/lib/python2.7/site-packages/tornado-4.3-py2.7-linux-x86_64.egg/tornado/concurrent.py", line 232, in result
+    raise_exc_info(self._exc_info)
+  File "<string>", line 3, in raise_exc_info
+HTTPError: HTTP 599: Timeout
+ERROR:tornado.access:500 GET /products?liveid=z1.66boss.ckhmqlzuytaw (127.0.0.1) 20017.74ms
+ERROR:tornado.application:Uncaught exception GET /products?liveid=z1.66boss.ckhmqlzuytaw (127.0.0.1)
+HTTPServerRequest(protocol='http', host='127.0.0.1:8888', method='GET', uri='/products?liveid=z1.66boss.ckhmqlzuytaw', version='HTTP/1.0', remote_ip='127.0.0.1', headers={'Accept-Language': 'zh-Hans-CN;q=1, en-CN;q=0.9', 'Accept-Encoding': 'gzip, deflate', 'Host': '127.0.0.1:8888', 'Accept': '*/*', 'User-Agent': 'SixtySixBoss/1.0 (iPhone; iOS 9.3.2; Scale/3.00)', 'Connection': 'close'})
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/site-packages/tornado-4.3-py2.7-linux-x86_64.egg/tornado/web.py", line 1401, in _stack_context_handle_exception
+    raise_exc_info((type, value, traceback))
+  File "/usr/lib/python2.7/site-packages/tornado-4.3-py2.7-linux-x86_64.egg/tornado/stack_context.py", line 314, in wrapped
+    ret = fn(*args, **kwargs)
+  File "/usr/lib/python2.7/site-packages/tornado-4.3-py2.7-linux-x86_64.egg/tornado/web.py", line 1613, in future_complete
+    f.result()
+  File "/usr/lib/python2.7/site-packages/tornado-4.3-py2.7-linux-x86_64.egg/tornado/concurrent.py", line 232, in result
+    raise_exc_info(self._exc_info)
+  File "/usr/lib/python2.7/site-packages/tornado-4.3-py2.7-linux-x86_64.egg/tornado/gen.py", line 1014, in run
+    yielded = self.gen.throw(*exc_info)
+  File "./api.py", line 183, in get
+    response = yield client.fetch(URL, method='POST', body=data)
+  File "/usr/lib/python2.7/site-packages/tornado-4.3-py2.7-linux-x86_64.egg/tornado/gen.py", line 1008, in run
+    value = future.result()
+  File "/usr/lib/python2.7/site-packages/tornado-4.3-py2.7-linux-x86_64.egg/tornado/concurrent.py", line 232, in result
+    raise_exc_info(self._exc_info)
+  File "<string>", line 3, in raise_exc_info
+HTTPError: HTTP 599: Timeout
+ERROR:tornado.access:500 GET /products?liveid=z1.66boss.ckhmqlzuytaw (127.0.0.1) 20008.59ms
+ERROR:tornado.application:Uncaught exception GET /products?liveid=z1.66boss.ckhmqlzuytaw (127.0.0.1)
+HTTPServerRequest(protocol='http', host='127.0.0.1:8888', method='GET', uri='/products?liveid=z1.66boss.ckhmqlzuytaw', version='HTTP/1.0', remote_ip='127.0.0.1', headers={'Accept-Language': 'zh-Hans-CN;q=1, en-CN;q=0.9', 'Accept-Encoding': 'gzip, deflate', 'Host': '127.0.0.1:8888', 'Accept': '*/*', 'User-Agent': 'SixtySixBoss/1.0 (iPhone; iOS 9.3.2; Scale/3.00)', 'Connection': 'close'})
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/site-packages/tornado-4.3-py2.7-linux-x86_64.egg/tornado/web.py", line 1401, in _stack_context_handle_exception
+    raise_exc_info((type, value, traceback))
+  File "/usr/lib/python2.7/site-packages/tornado-4.3-py2.7-linux-x86_64.egg/tornado/stack_context.py", line 314, in wrapped
+    ret = fn(*args, **kwargs)
+  File "/usr/lib/python2.7/site-packages/tornado-4.3-py2.7-linux-x86_64.egg/tornado/web.py", line 1613, in future_complete
+    f.result()
+  File "/usr/lib/python2.7/site-packages/tornado-4.3-py2.7-linux-x86_64.egg/tornado/concurrent.py", line 232, in result
+    raise_exc_info(self._exc_info)
+  File "/usr/lib/python2.7/site-packages/tornado-4.3-py2.7-linux-x86_64.egg/tornado/gen.py", line 1014, in run
+    yielded = self.gen.throw(*exc_info)
+  File "./api.py", line 183, in get
+    response = yield client.fetch(URL, method='POST', body=data)
+  File "/usr/lib/python2.7/site-packages/tornado-4.3-py2.7-linux-x86_64.egg/tornado/gen.py", line 1008, in run
+    value = future.result()
+  File "/usr/lib/python2.7/site-packages/tornado-4.3-py2.7-linux-x86_64.egg/tornado/concurrent.py", line 232, in result
+    raise_exc_info(self._exc_info)
+  File "<string>", line 3, in raise_exc_info
+HTTPError: HTTP 599: Timeout
+ERROR:tornado.access:500 GET /products?liveid=z1.66boss.ckhmqlzuytaw (127.0.0.1) 20018.76ms
+ERROR:tornado.application:Uncaught exception GET /products?liveid=z1.66boss.ckhmqlzuytaw (127.0.0.1)
+HTTPServerRequest(protocol='http', host='127.0.0.1:8888', method='GET', uri='/products?liveid=z1.66boss.ckhmqlzuytaw', version='HTTP/1.0', remote_ip='127.0.0.1', headers={'Accept-Language': 'zh-CN,zh;q=0.8', 'Accept-Encoding': 'gzip, deflate, sdch', 'Host': '127.0.0.1:8888', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8', 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.154 Safari/537.36 LBBROWSER', 'Connection': 'close'})
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/site-packages/tornado-4.3-py2.7-linux-x86_64.egg/tornado/web.py", line 1401, in _stack_context_handle_exception
+    raise_exc_info((type, value, traceback))
+  File "/usr/lib/python2.7/site-packages/tornado-4.3-py2.7-linux-x86_64.egg/tornado/stack_context.py", line 314, in wrapped
+    ret = fn(*args, **kwargs)
+  File "/usr/lib/python2.7/site-packages/tornado-4.3-py2.7-linux-x86_64.egg/tornado/web.py", line 1613, in future_complete
+    f.result()
+  File "/usr/lib/python2.7/site-packages/tornado-4.3-py2.7-linux-x86_64.egg/tornado/concurrent.py", line 232, in result
+    raise_exc_info(self._exc_info)
+  File "/usr/lib/python2.7/site-packages/tornado-4.3-py2.7-linux-x86_64.egg/tornado/gen.py", line 1014, in run
+    yielded = self.gen.throw(*exc_info)
+  File "./api.py", line 183, in get
+    response = yield client.fetch(URL, method='POST', body=data)
+  File "/usr/lib/python2.7/site-packages/tornado-4.3-py2.7-linux-x86_64.egg/tornado/gen.py", line 1008, in run
+    value = future.result()
+  File "/usr/lib/python2.7/site-packages/tornado-4.3-py2.7-linux-x86_64.egg/tornado/concurrent.py", line 232, in result
+    raise_exc_info(self._exc_info)
+  File "<string>", line 3, in raise_exc_info
+HTTPError: HTTP 599: Timeout
+ERROR:tornado.access:500 GET /products?liveid=z1.66boss.ckhmqlzuytaw (127.0.0.1) 20020.31ms
+ERROR:tornado.application:Uncaught exception GET /products?liveid=z1.66boss.ckhmqlzuytaw (127.0.0.1)
+HTTPServerRequest(protocol='http', host='127.0.0.1:8888', method='GET', uri='/products?liveid=z1.66boss.ckhmqlzuytaw', version='HTTP/1.0', remote_ip='127.0.0.1', headers={'Accept-Language': 'zh-CN,zh;q=0.8', 'Accept-Encoding': 'gzip, deflate, sdch', 'Host': '127.0.0.1:8888', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8', 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.154 Safari/537.36 LBBROWSER', 'Connection': 'close', 'Cache-Control': 'max-age=0'})
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/site-packages/tornado-4.3-py2.7-linux-x86_64.egg/tornado/web.py", line 1401, in _stack_context_handle_exception
+    raise_exc_info((type, value, traceback))
+  File "/usr/lib/python2.7/site-packages/tornado-4.3-py2.7-linux-x86_64.egg/tornado/stack_context.py", line 314, in wrapped
+    ret = fn(*args, **kwargs)
+  File "/usr/lib/python2.7/site-packages/tornado-4.3-py2.7-linux-x86_64.egg/tornado/web.py", line 1613, in future_complete
+    f.result()
+  File "/usr/lib/python2.7/site-packages/tornado-4.3-py2.7-linux-x86_64.egg/tornado/concurrent.py", line 232, in result
+    raise_exc_info(self._exc_info)
+  File "/usr/lib/python2.7/site-packages/tornado-4.3-py2.7-linux-x86_64.egg/tornado/gen.py", line 1014, in run
+    yielded = self.gen.throw(*exc_info)
+  File "./api.py", line 183, in get
+    response = yield client.fetch(URL, method='POST', body=data)
+  File "/usr/lib/python2.7/site-packages/tornado-4.3-py2.7-linux-x86_64.egg/tornado/gen.py", line 1008, in run
+    value = future.result()
+  File "/usr/lib/python2.7/site-packages/tornado-4.3-py2.7-linux-x86_64.egg/tornado/concurrent.py", line 232, in result
+    raise_exc_info(self._exc_info)
+  File "<string>", line 3, in raise_exc_info
+HTTPError: HTTP 599: Timeout
+ERROR:tornado.access:500 GET /products?liveid=z1.66boss.ckhmqlzuytaw (127.0.0.1) 20021.21ms
+ERROR:tornado.application:Uncaught exception GET /products?liveid=z1.66boss.ckhmqlzuytaw (127.0.0.1)
+HTTPServerRequest(protocol='http', host='127.0.0.1:8888', method='GET', uri='/products?liveid=z1.66boss.ckhmqlzuytaw', version='HTTP/1.0', remote_ip='127.0.0.1', headers={'Accept-Language': 'zh-CN,zh;q=0.8', 'Accept-Encoding': 'gzip, deflate, sdch', 'Host': '127.0.0.1:8888', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8', 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.154 Safari/537.36 LBBROWSER', 'Connection': 'close', 'Cache-Control': 'max-age=0'})
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/site-packages/tornado-4.3-py2.7-linux-x86_64.egg/tornado/web.py", line 1401, in _stack_context_handle_exception
+    raise_exc_info((type, value, traceback))
+  File "/usr/lib/python2.7/site-packages/tornado-4.3-py2.7-linux-x86_64.egg/tornado/stack_context.py", line 314, in wrapped
+    ret = fn(*args, **kwargs)
+  File "/usr/lib/python2.7/site-packages/tornado-4.3-py2.7-linux-x86_64.egg/tornado/web.py", line 1613, in future_complete
+    f.result()
+  File "/usr/lib/python2.7/site-packages/tornado-4.3-py2.7-linux-x86_64.egg/tornado/concurrent.py", line 232, in result
+    raise_exc_info(self._exc_info)
+  File "/usr/lib/python2.7/site-packages/tornado-4.3-py2.7-linux-x86_64.egg/tornado/gen.py", line 1014, in run
+    yielded = self.gen.throw(*exc_info)
+  File "./api.py", line 183, in get
+    response = yield client.fetch(URL, method='POST', body=data)
+  File "/usr/lib/python2.7/site-packages/tornado-4.3-py2.7-linux-x86_64.egg/tornado/gen.py", line 1008, in run
+    value = future.result()
+  File "/usr/lib/python2.7/site-packages/tornado-4.3-py2.7-linux-x86_64.egg/tornado/concurrent.py", line 232, in result
+    raise_exc_info(self._exc_info)
+  File "<string>", line 3, in raise_exc_info
+HTTPError: HTTP 599: Timeout
+ERROR:tornado.access:500 GET /products?liveid=z1.66boss.ckhmqlzuytaw (127.0.0.1) 20021.42ms
+ERROR:tornado.application:Uncaught exception GET /create?login_user_id=15&title=yujj&startime=2016-6-27%2015%3A20%3A18&ownerid=15&token=9da4e3ea3214451976507e2f0d623bd8&products=190%2C189%2C188%2C&snapshot=yjjhj& (127.0.0.1)
+HTTPServerRequest(protocol='http', host='127.0.0.1:8888', method='GET', uri='/create?login_user_id=15&title=yujj&startime=2016-6-27%2015%3A20%3A18&ownerid=15&token=9da4e3ea3214451976507e2f0d623bd8&products=190%2C189%2C188%2C&snapshot=yjjhj&', version='HTTP/1.0', remote_ip='127.0.0.1', headers={'Host': '127.0.0.1:8888', 'Connection': 'close', 'Accept-Encoding': 'gzip', 'User-Agent': 'okhttp/2.4.0'})
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/site-packages/tornado-4.3-py2.7-linux-x86_64.egg/tornado/web.py", line 1443, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "./api.py", line 158, in get
+    mysql.SaveProducts(resp['liveid'], productsl)
+  File "/root/git/workapi/api/mysql.py", line 340, in SaveProducts
+    cur.executemany(sql, param)
+  File "/usr/lib/python2.7/site-packages/DBUtils-1.1-py2.7.egg/DBUtils/SteadyDB.py", line 631, in tough_method
+    raise error # reraise the original error again
+OperationalError: (1366, "Incorrect integer value: '' for column 'goodsid' at row 4")
+ERROR:tornado.access:500 GET /create?login_user_id=15&title=yujj&startime=2016-6-27%2015%3A20%3A18&ownerid=15&token=9da4e3ea3214451976507e2f0d623bd8&products=190%2C189%2C188%2C&snapshot=yjjhj& (127.0.0.1) 143.14ms
+ERROR:tornado.application:Uncaught exception GET /create?login_user_id=15&title=yujj&startime=2016-6-27%2015%3A20%3A18&ownerid=15&token=9da4e3ea3214451976507e2f0d623bd8&products=190%2C189%2C188%2C&snapshot=yjjhj& (127.0.0.1)
+HTTPServerRequest(protocol='http', host='127.0.0.1:8888', method='GET', uri='/create?login_user_id=15&title=yujj&startime=2016-6-27%2015%3A20%3A18&ownerid=15&token=9da4e3ea3214451976507e2f0d623bd8&products=190%2C189%2C188%2C&snapshot=yjjhj&', version='HTTP/1.0', remote_ip='127.0.0.1', headers={'Host': '127.0.0.1:8888', 'Connection': 'close', 'Accept-Encoding': 'gzip', 'User-Agent': 'okhttp/2.4.0'})
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/site-packages/tornado-4.3-py2.7-linux-x86_64.egg/tornado/web.py", line 1443, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "./api.py", line 158, in get
+    mysql.SaveProducts(resp['liveid'], productsl)
+  File "/root/git/workapi/api/mysql.py", line 340, in SaveProducts
+    cur.executemany(sql, param)
+  File "/usr/lib/python2.7/site-packages/DBUtils-1.1-py2.7.egg/DBUtils/SteadyDB.py", line 631, in tough_method
+    raise error # reraise the original error again
+OperationalError: (1366, "Incorrect integer value: '' for column 'goodsid' at row 4")
+ERROR:tornado.access:500 GET /create?login_user_id=15&title=yujj&startime=2016-6-27%2015%3A20%3A18&ownerid=15&token=9da4e3ea3214451976507e2f0d623bd8&products=190%2C189%2C188%2C&snapshot=yjjhj& (127.0.0.1) 109.01ms
+ERROR:tornado.application:Uncaught exception GET /create?login_user_id=15&title=yujj&startime=2016-6-27+15%3A20%3A18&ownerid=15&token=9da4e3ea3214451976507e2f0d623bd8&products=190%2C189%2C188%2C&snapshot=yjjhj& (127.0.0.1)
+HTTPServerRequest(protocol='http', host='127.0.0.1:8888', method='GET', uri='/create?login_user_id=15&title=yujj&startime=2016-6-27+15%3A20%3A18&ownerid=15&token=9da4e3ea3214451976507e2f0d623bd8&products=190%2C189%2C188%2C&snapshot=yjjhj&', version='HTTP/1.0', remote_ip='127.0.0.1', headers={'Accept-Language': 'zh-CN,zh;q=0.8', 'Accept-Encoding': 'gzip, deflate, sdch', 'Host': '127.0.0.1:8888', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8', 'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.80 Safari/537.36 Core/1.47.210.400 QQBrowser/9.4.8071.400', 'Connection': 'close', 'Upgrade-Insecure-Requests': '1'})
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/site-packages/tornado-4.3-py2.7-linux-x86_64.egg/tornado/web.py", line 1443, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "./api.py", line 158, in get
+    mysql.SaveProducts(resp['liveid'], productsl)
+  File "/root/git/workapi/api/mysql.py", line 340, in SaveProducts
+    cur.executemany(sql, param)
+  File "/usr/lib/python2.7/site-packages/DBUtils-1.1-py2.7.egg/DBUtils/SteadyDB.py", line 631, in tough_method
+    raise error # reraise the original error again
+OperationalError: (1366, "Incorrect integer value: '' for column 'goodsid' at row 4")
+ERROR:tornado.access:500 GET /create?login_user_id=15&title=yujj&startime=2016-6-27+15%3A20%3A18&ownerid=15&token=9da4e3ea3214451976507e2f0d623bd8&products=190%2C189%2C188%2C&snapshot=yjjhj& (127.0.0.1) 129.96ms
+ERROR:tornado.application:Uncaught exception GET /create?login_user_id=15&title=%E4%BB%96%E4%BB%96%E4%BB%96&startime=2016-6-27%2015%3A22%3A37&ownerid=15&token=9da4e3ea3214451976507e2f0d623bd8&products=190%2C189%2C&snapshot=%E5%8F%91%E5%98%8E%E5%98%8E%E5%98%8E%E5%98%8E%E5%A5%BD& (127.0.0.1)
+HTTPServerRequest(protocol='http', host='127.0.0.1:8888', method='GET', uri='/create?login_user_id=15&title=%E4%BB%96%E4%BB%96%E4%BB%96&startime=2016-6-27%2015%3A22%3A37&ownerid=15&token=9da4e3ea3214451976507e2f0d623bd8&products=190%2C189%2C&snapshot=%E5%8F%91%E5%98%8E%E5%98%8E%E5%98%8E%E5%98%8E%E5%A5%BD&', version='HTTP/1.0', remote_ip='127.0.0.1', headers={'Host': '127.0.0.1:8888', 'Connection': 'close', 'Accept-Encoding': 'gzip', 'User-Agent': 'okhttp/2.4.0'})
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/site-packages/tornado-4.3-py2.7-linux-x86_64.egg/tornado/web.py", line 1443, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "./api.py", line 148, in get
+    result = mysql.Create(ownerid, resp, title, mystr, shopstr, (ACCESS_URL + coverstr))
+  File "/root/git/workapi/api/mysql.py", line 297, in Create
+    channel['tojson'], channel['hls_live_url'], mystr, shopstr)
+UnicodeEncodeError: 'ascii' codec can't encode characters in position 31-36: ordinal not in range(128)
+ERROR:tornado.access:500 GET /create?login_user_id=15&title=%E4%BB%96%E4%BB%96%E4%BB%96&startime=2016-6-27%2015%3A22%3A37&ownerid=15&token=9da4e3ea3214451976507e2f0d623bd8&products=190%2C189%2C&snapshot=%E5%8F%91%E5%98%8E%E5%98%8E%E5%98%8E%E5%98%8E%E5%A5%BD& (127.0.0.1) 107.97ms
+ERROR:tornado.application:Uncaught exception GET /create?login_user_id=15&title=%E4%BB%96%E4%BB%96%E4%BB%96&startime=2016-6-27%2015%3A22%3A37&ownerid=15&token=9da4e3ea3214451976507e2f0d623bd8&products=190%2C189%2C&snapshot=%E5%8F%91%E5%98%8E%E5%98%8E%E5%98%8E%E5%98%8E%E5%A5%BD& (127.0.0.1)
+HTTPServerRequest(protocol='http', host='127.0.0.1:8888', method='GET', uri='/create?login_user_id=15&title=%E4%BB%96%E4%BB%96%E4%BB%96&startime=2016-6-27%2015%3A22%3A37&ownerid=15&token=9da4e3ea3214451976507e2f0d623bd8&products=190%2C189%2C&snapshot=%E5%8F%91%E5%98%8E%E5%98%8E%E5%98%8E%E5%98%8E%E5%A5%BD&', version='HTTP/1.0', remote_ip='127.0.0.1', headers={'Host': '127.0.0.1:8888', 'Connection': 'close', 'Accept-Encoding': 'gzip', 'User-Agent': 'okhttp/2.4.0'})
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/site-packages/tornado-4.3-py2.7-linux-x86_64.egg/tornado/web.py", line 1443, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "./api.py", line 148, in get
+    result = mysql.Create(ownerid, resp, title, mystr, shopstr, (ACCESS_URL + coverstr))
+  File "/root/git/workapi/api/mysql.py", line 297, in Create
+    channel['tojson'], channel['hls_live_url'], mystr, shopstr)
+UnicodeEncodeError: 'ascii' codec can't encode characters in position 31-36: ordinal not in range(128)
+ERROR:tornado.access:500 GET /create?login_user_id=15&title=%E4%BB%96%E4%BB%96%E4%BB%96&startime=2016-6-27%2015%3A22%3A37&ownerid=15&token=9da4e3ea3214451976507e2f0d623bd8&products=190%2C189%2C&snapshot=%E5%8F%91%E5%98%8E%E5%98%8E%E5%98%8E%E5%98%8E%E5%A5%BD& (127.0.0.1) 106.70ms
+ERROR:tornado.application:Uncaught exception GET /create?login_user_id=15&title=%E4%BB%96%E4%BB%96%E4%BB%96&startime=2016-6-27+15%3A22%3A37&ownerid=15&token=9da4e3ea3214451976507e2f0d623bd8&products=190%2C189%2C&snapshot=%E5%8F%91%E5%98%8E%E5%98%8E%E5%98%8E%E5%98%8E%E5%A5%BD& (127.0.0.1)
+HTTPServerRequest(protocol='http', host='127.0.0.1:8888', method='GET', uri='/create?login_user_id=15&title=%E4%BB%96%E4%BB%96%E4%BB%96&startime=2016-6-27+15%3A22%3A37&ownerid=15&token=9da4e3ea3214451976507e2f0d623bd8&products=190%2C189%2C&snapshot=%E5%8F%91%E5%98%8E%E5%98%8E%E5%98%8E%E5%98%8E%E5%A5%BD&', version='HTTP/1.0', remote_ip='127.0.0.1', headers={'Accept-Language': 'zh-cn', 'Accept-Encoding': 'deflate, gzip', 'Host': '127.0.0.1:8888', 'Accept': '*/*', 'User-Agent': 'Mozilla/5.0 (iPhone; U; CPU iPhone OS 4_0 like Mac OS X; en-us) AppleWebKit/532.9 (KHTML, like Gecko) Version/4.0.5 Mobile/8A293 Safari/6531.22.7', 'Connection': 'close'})
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/site-packages/tornado-4.3-py2.7-linux-x86_64.egg/tornado/web.py", line 1443, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "./api.py", line 148, in get
+    result = mysql.Create(ownerid, resp, title, mystr, shopstr, (ACCESS_URL + coverstr))
+  File "/root/git/workapi/api/mysql.py", line 297, in Create
+    channel['tojson'], channel['hls_live_url'], mystr, shopstr)
+UnicodeEncodeError: 'ascii' codec can't encode characters in position 31-36: ordinal not in range(128)
+ERROR:tornado.access:500 GET /create?login_user_id=15&title=%E4%BB%96%E4%BB%96%E4%BB%96&startime=2016-6-27+15%3A22%3A37&ownerid=15&token=9da4e3ea3214451976507e2f0d623bd8&products=190%2C189%2C&snapshot=%E5%8F%91%E5%98%8E%E5%98%8E%E5%98%8E%E5%98%8E%E5%A5%BD& (127.0.0.1) 118.06ms
+ERROR:tornado.application:Uncaught exception GET /create?login_user_id=15&title=%E4%BB%96%E4%BB%96%E4%BB%96&startime=2016-6-27+15%3A22%3A37&ownerid=15&token=9da4e3ea3214451976507e2f0d623bd8&products=190%2C189%2C&snapshot=%E5%8F%91%E5%98%8E%E5%98%8E%E5%98%8E%E5%98%8E%E5%A5%BD& (127.0.0.1)
+HTTPServerRequest(protocol='http', host='127.0.0.1:8888', method='GET', uri='/create?login_user_id=15&title=%E4%BB%96%E4%BB%96%E4%BB%96&startime=2016-6-27+15%3A22%3A37&ownerid=15&token=9da4e3ea3214451976507e2f0d623bd8&products=190%2C189%2C&snapshot=%E5%8F%91%E5%98%8E%E5%98%8E%E5%98%8E%E5%98%8E%E5%A5%BD&', version='HTTP/1.0', remote_ip='127.0.0.1', headers={'Accept-Language': 'zh-cn, zh', 'Host': '127.0.0.1:8888', 'Accept': '*/*', 'User-Agent': 'Mozilla/5.0 (Linux; U; Android 4.4.2; zh-cn; GT-I9500 Build/KOT49H) AppleWebKit/537.36 (KHTML, like Gecko)Version/4.0 MQQBrowser/5.0 QQ-URL-Manager Mobile Safari/537.36', 'Accept-Charset': 'GB2312,utf-8;q=0.7,*;q=0.7', 'Connection': 'close'})
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/site-packages/tornado-4.3-py2.7-linux-x86_64.egg/tornado/web.py", line 1443, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "./api.py", line 148, in get
+    result = mysql.Create(ownerid, resp, title, mystr, shopstr, (ACCESS_URL + coverstr))
+  File "/root/git/workapi/api/mysql.py", line 297, in Create
+    channel['tojson'], channel['hls_live_url'], mystr, shopstr)
+UnicodeEncodeError: 'ascii' codec can't encode characters in position 31-36: ordinal not in range(128)
+ERROR:tornado.access:500 GET /create?login_user_id=15&title=%E4%BB%96%E4%BB%96%E4%BB%96&startime=2016-6-27+15%3A22%3A37&ownerid=15&token=9da4e3ea3214451976507e2f0d623bd8&products=190%2C189%2C&snapshot=%E5%8F%91%E5%98%8E%E5%98%8E%E5%98%8E%E5%98%8E%E5%A5%BD& (127.0.0.1) 106.89ms
+ERROR:tornado.application:Uncaught exception GET /create?login_user_id=15&title=%E4%BB%96%E4%BB%96%E4%BB%96&startime=2016-6-27+15%3A22%3A37&ownerid=15&token=9da4e3ea3214451976507e2f0d623bd8&products=190%2C189%2C&snapshot=%E5%8F%91%E5%98%8E%E5%98%8E%E5%98%8E%E5%98%8E%E5%A5%BD& (127.0.0.1)
+HTTPServerRequest(protocol='http', host='127.0.0.1:8888', method='GET', uri='/create?login_user_id=15&title=%E4%BB%96%E4%BB%96%E4%BB%96&startime=2016-6-27+15%3A22%3A37&ownerid=15&token=9da4e3ea3214451976507e2f0d623bd8&products=190%2C189%2C&snapshot=%E5%8F%91%E5%98%8E%E5%98%8E%E5%98%8E%E5%98%8E%E5%A5%BD&', version='HTTP/1.0', remote_ip='127.0.0.1', headers={'Accept-Language': 'en-US,*', 'Accept-Encoding': 'gzip, deflate', 'Host': '127.0.0.1:8888', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8', 'User-Agent': 'Mozilla/5.0 (iPhone; CPU iPhone OS 8_4 like Mac OS X) AppleWebKit/600.1.4 (KHTML, like Gecko) Version/8.0 Mobile/12H143 Safari/600.1.4', 'Connection': 'close', 'Referer': ''})
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/site-packages/tornado-4.3-py2.7-linux-x86_64.egg/tornado/web.py", line 1443, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "./api.py", line 148, in get
+    result = mysql.Create(ownerid, resp, title, mystr, shopstr, (ACCESS_URL + coverstr))
+  File "/root/git/workapi/api/mysql.py", line 297, in Create
+    channel['tojson'], channel['hls_live_url'], mystr, shopstr)
+UnicodeEncodeError: 'ascii' codec can't encode characters in position 31-36: ordinal not in range(128)
+ERROR:tornado.access:500 GET /create?login_user_id=15&title=%E4%BB%96%E4%BB%96%E4%BB%96&startime=2016-6-27+15%3A22%3A37&ownerid=15&token=9da4e3ea3214451976507e2f0d623bd8&products=190%2C189%2C&snapshot=%E5%8F%91%E5%98%8E%E5%98%8E%E5%98%8E%E5%98%8E%E5%A5%BD& (127.0.0.1) 110.07ms
+ERROR:tornado.application:Uncaught exception POST /upload (127.0.0.1)
+HTTPServerRequest(protocol='http', host='127.0.0.1:8888', method='POST', uri='/upload', version='HTTP/1.0', remote_ip='127.0.0.1', headers={'Origin': 'http://live.66boss.com', 'Content-Length': '107341', 'Accept-Language': 'zh-CN,zh;q=0.8', 'Accept-Encoding': 'gzip, deflate', 'Host': '127.0.0.1:8888', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8', 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.154 Safari/537.36 LBBROWSER', 'Connection': 'close', 'Referer': 'http://live.66boss.com/api/upload', 'Cache-Control': 'max-age=0', 'Content-Type': 'multipart/form-data; boundary=----WebKitFormBoundaryNZ0zVwannjAtxkaI'})
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/site-packages/tornado-4.3-py2.7-linux-x86_64.egg/tornado/web.py", line 1443, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "./api.py", line 226, in post
+    filename = getFileName() + suffix
+  File "./api.py", line 203, in getFileName
+    source = list(string.lowercase)
+NameError: global name 'string' is not defined
+ERROR:tornado.access:500 POST /upload (127.0.0.1) 1.97ms
+ERROR:tornado.application:Uncaught exception GET /create?login_user_id=15&title=%E4%BB%96%E4%BB%96%E4%BB%96&startime=2016-6-27+15%3A22%3A37&ownerid=15&token=9da4e3ea3214451976507e2f0d623bd8&products=190%2C189%2C&snapshot=%E5%8F%91%E5%98%8E%E5%98%8E%E5%98%8E%E5%98%8E%E5%A5%BD& (127.0.0.1)
+HTTPServerRequest(protocol='http', host='127.0.0.1:8888', method='GET', uri='/create?login_user_id=15&title=%E4%BB%96%E4%BB%96%E4%BB%96&startime=2016-6-27+15%3A22%3A37&ownerid=15&token=9da4e3ea3214451976507e2f0d623bd8&products=190%2C189%2C&snapshot=%E5%8F%91%E5%98%8E%E5%98%8E%E5%98%8E%E5%98%8E%E5%A5%BD&', version='HTTP/1.0', remote_ip='127.0.0.1', headers={'Accept-Language': 'zh-CN,zh;q=0.8,en-US;q=0.6,en;q=0.4', 'Accept-Encoding': 'gzip, deflate, sdch, br', 'Host': '127.0.0.1:8888', 'Accept': '*/*', 'User-Agent': 'Mozilla/5.0 (Windows NT 5.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/45.0.2454.101 Safari/537.36', 'Connection': 'close'})
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/site-packages/tornado-4.3-py2.7-linux-x86_64.egg/tornado/web.py", line 1443, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "./api.py", line 151, in get
+    result = mysql.Create(ownerid, resp, title, mystr, shopstr)
+  File "/root/git/workapi/api/mysql.py", line 297, in Create
+    channel['tojson'], channel['hls_live_url'], mystr, shopstr)
+UnicodeEncodeError: 'ascii' codec can't encode characters in position 31-36: ordinal not in range(128)
+ERROR:tornado.access:500 GET /create?login_user_id=15&title=%E4%BB%96%E4%BB%96%E4%BB%96&startime=2016-6-27+15%3A22%3A37&ownerid=15&token=9da4e3ea3214451976507e2f0d623bd8&products=190%2C189%2C&snapshot=%E5%8F%91%E5%98%8E%E5%98%8E%E5%98%8E%E5%98%8E%E5%A5%BD& (127.0.0.1) 110.36ms
+ERROR:tornado.application:Uncaught exception GET /create?login_user_id=15&title=%E4%BB%96%E4%BB%96%E4%BB%96&startime=2016-6-27+15%3A22%3A37&ownerid=15&token=9da4e3ea3214451976507e2f0d623bd8&products=190%2C189%2C&snapshot=%E5%8F%91%E5%98%8E%E5%98%8E%E5%98%8E%E5%98%8E%E5%A5%BD& (127.0.0.1)
+HTTPServerRequest(protocol='http', host='127.0.0.1:8888', method='GET', uri='/create?login_user_id=15&title=%E4%BB%96%E4%BB%96%E4%BB%96&startime=2016-6-27+15%3A22%3A37&ownerid=15&token=9da4e3ea3214451976507e2f0d623bd8&products=190%2C189%2C&snapshot=%E5%8F%91%E5%98%8E%E5%98%8E%E5%98%8E%E5%98%8E%E5%A5%BD&', version='HTTP/1.0', remote_ip='127.0.0.1', headers={'Accept-Language': 'zh-cn', 'Accept-Encoding': 'deflate, gzip', 'Host': '127.0.0.1:8888', 'Accept': '*/*', 'User-Agent': 'Mozilla/5.0 (iPhone; U; CPU iPhone OS 4_0 like Mac OS X; en-us) AppleWebKit/532.9 (KHTML, like Gecko) Version/4.0.5 Mobile/8A293 Safari/6531.22.7', 'Connection': 'close'})
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/site-packages/tornado-4.3-py2.7-linux-x86_64.egg/tornado/web.py", line 1443, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "./api.py", line 151, in get
+    result = mysql.Create(ownerid, resp, title, mystr, shopstr)
+  File "/root/git/workapi/api/mysql.py", line 297, in Create
+    channel['tojson'], channel['hls_live_url'], mystr, shopstr)
+UnicodeEncodeError: 'ascii' codec can't encode characters in position 31-36: ordinal not in range(128)
+ERROR:tornado.access:500 GET /create?login_user_id=15&title=%E4%BB%96%E4%BB%96%E4%BB%96&startime=2016-6-27+15%3A22%3A37&ownerid=15&token=9da4e3ea3214451976507e2f0d623bd8&products=190%2C189%2C&snapshot=%E5%8F%91%E5%98%8E%E5%98%8E%E5%98%8E%E5%98%8E%E5%A5%BD& (127.0.0.1) 125.08ms
+ERROR:tornado.application:Uncaught exception GET /create?login_user_id=15&title=%E4%BB%96%E4%BB%96%E4%BB%96&startime=2016-6-27+15%3A22%3A37&ownerid=15&token=9da4e3ea3214451976507e2f0d623bd8&products=190%2C189%2C&snapshot=%E5%8F%91%E5%98%8E%E5%98%8E%E5%98%8E%E5%98%8E%E5%A5%BD& (127.0.0.1)
+HTTPServerRequest(protocol='http', host='127.0.0.1:8888', method='GET', uri='/create?login_user_id=15&title=%E4%BB%96%E4%BB%96%E4%BB%96&startime=2016-6-27+15%3A22%3A37&ownerid=15&token=9da4e3ea3214451976507e2f0d623bd8&products=190%2C189%2C&snapshot=%E5%8F%91%E5%98%8E%E5%98%8E%E5%98%8E%E5%98%8E%E5%A5%BD&', version='HTTP/1.0', remote_ip='127.0.0.1', headers={'Accept-Language': 'zh-CN,zh;q=0.8,en-US;q=0.6,en;q=0.4', 'Accept-Encoding': 'gzip, deflate, sdch, br', 'Host': '127.0.0.1:8888', 'Accept': '*/*', 'User-Agent': 'Mozilla/5.0 (Windows NT 5.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/45.0.2454.101 Safari/537.36', 'Connection': 'close'})
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/site-packages/tornado-4.3-py2.7-linux-x86_64.egg/tornado/web.py", line 1443, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "./api.py", line 151, in get
+    result = mysql.Create(ownerid, resp, title, mystr, shopstr)
+  File "/root/git/workapi/api/mysql.py", line 297, in Create
+    channel['tojson'], channel['hls_live_url'], mystr, shopstr)
+UnicodeEncodeError: 'ascii' codec can't encode characters in position 31-36: ordinal not in range(128)
+ERROR:tornado.access:500 GET /create?login_user_id=15&title=%E4%BB%96%E4%BB%96%E4%BB%96&startime=2016-6-27+15%3A22%3A37&ownerid=15&token=9da4e3ea3214451976507e2f0d623bd8&products=190%2C189%2C&snapshot=%E5%8F%91%E5%98%8E%E5%98%8E%E5%98%8E%E5%98%8E%E5%A5%BD& (127.0.0.1) 105.01ms
+ERROR:tornado.application:Uncaught exception GET /create?login_user_id=15&title=%E4%BB%96%E4%BB%96%E4%BB%96&startime=2016-6-27+15%3A22%3A37&ownerid=15&token=9da4e3ea3214451976507e2f0d623bd8&products=190%2C189%2C&snapshot=%E5%8F%91%E5%98%8E%E5%98%8E%E5%98%8E%E5%98%8E%E5%A5%BD& (127.0.0.1)
+HTTPServerRequest(protocol='http', host='127.0.0.1:8888', method='GET', uri='/create?login_user_id=15&title=%E4%BB%96%E4%BB%96%E4%BB%96&startime=2016-6-27+15%3A22%3A37&ownerid=15&token=9da4e3ea3214451976507e2f0d623bd8&products=190%2C189%2C&snapshot=%E5%8F%91%E5%98%8E%E5%98%8E%E5%98%8E%E5%98%8E%E5%A5%BD&', version='HTTP/1.0', remote_ip='127.0.0.1', headers={'Accept-Language': 'zh-cn', 'Accept-Encoding': 'deflate, gzip', 'Host': '127.0.0.1:8888', 'Accept': '*/*', 'User-Agent': 'Mozilla/5.0 (iPhone; U; CPU iPhone OS 4_0 like Mac OS X; en-us) AppleWebKit/532.9 (KHTML, like Gecko) Version/4.0.5 Mobile/8A293 Safari/6531.22.7', 'Connection': 'close'})
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/site-packages/tornado-4.3-py2.7-linux-x86_64.egg/tornado/web.py", line 1443, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "./api.py", line 153, in get
+    result = mysql.Create(ownerid, resp, title, mystr, shopstr, (ACCESS_URL + coverstr))
+  File "/root/git/workapi/api/mysql.py", line 297, in Create
+    channel['tojson'], channel['hls_live_url'], mystr, shopstr)
+UnicodeEncodeError: 'ascii' codec can't encode characters in position 31-36: ordinal not in range(128)
+ERROR:tornado.access:500 GET /create?login_user_id=15&title=%E4%BB%96%E4%BB%96%E4%BB%96&startime=2016-6-27+15%3A22%3A37&ownerid=15&token=9da4e3ea3214451976507e2f0d623bd8&products=190%2C189%2C&snapshot=%E5%8F%91%E5%98%8E%E5%98%8E%E5%98%8E%E5%98%8E%E5%A5%BD& (127.0.0.1) 108.83ms
+ERROR:tornado.application:Uncaught exception GET /create?login_user_id=15&title=%E4%BB%96%E4%BB%96%E4%BB%96&startime=2016-6-27+15%3A22%3A37&ownerid=15&token=9da4e3ea3214451976507e2f0d623bd8&products=190%2C189%2C&snapshot=%E5%8F%91%E5%98%8E%E5%98%8E%E5%98%8E%E5%98%8E%E5%A5%BD& (127.0.0.1)
+HTTPServerRequest(protocol='http', host='127.0.0.1:8888', method='GET', uri='/create?login_user_id=15&title=%E4%BB%96%E4%BB%96%E4%BB%96&startime=2016-6-27+15%3A22%3A37&ownerid=15&token=9da4e3ea3214451976507e2f0d623bd8&products=190%2C189%2C&snapshot=%E5%8F%91%E5%98%8E%E5%98%8E%E5%98%8E%E5%98%8E%E5%A5%BD&', version='HTTP/1.0', remote_ip='127.0.0.1', headers={'Accept-Language': 'zh-CN,zh;q=0.8,en-US;q=0.6,en;q=0.4', 'Accept-Encoding': 'gzip, deflate, sdch, br', 'Host': '127.0.0.1:8888', 'Accept': '*/*', 'User-Agent': 'Mozilla/5.0 (Windows NT 5.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/45.0.2454.101 Safari/537.36', 'Connection': 'close'})
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/site-packages/tornado-4.3-py2.7-linux-x86_64.egg/tornado/web.py", line 1443, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "./api.py", line 153, in get
+    result = mysql.Create(ownerid, resp, title, mystr, shopstr, (ACCESS_URL + coverstr))
+  File "/root/git/workapi/api/mysql.py", line 297, in Create
+    channel['tojson'], channel['hls_live_url'], mystr, shopstr)
+UnicodeEncodeError: 'ascii' codec can't encode characters in position 31-36: ordinal not in range(128)
+ERROR:tornado.access:500 GET /create?login_user_id=15&title=%E4%BB%96%E4%BB%96%E4%BB%96&startime=2016-6-27+15%3A22%3A37&ownerid=15&token=9da4e3ea3214451976507e2f0d623bd8&products=190%2C189%2C&snapshot=%E5%8F%91%E5%98%8E%E5%98%8E%E5%98%8E%E5%98%8E%E5%A5%BD& (127.0.0.1) 116.92ms
+ERROR:tornado.application:Uncaught exception GET /create?startime=2016-7-714%3A29%3A30&ownerid=1000002231&title=%E4%B8%80%E8%84%B8%E6%87%B5%E9%80%BC%E7%9A%84%E8%AF%95%E6%92%AD%F0%9F%98%B3%F0%9F%98%B3%F0%9F%98%B3&token=308e802069f0d3c7ece29cfeec0e3b84&login_user_id=1000002231&shop=0& (127.0.0.1)
+HTTPServerRequest(protocol='http', host='127.0.0.1:8888', method='GET', uri='/create?startime=2016-7-714%3A29%3A30&ownerid=1000002231&title=%E4%B8%80%E8%84%B8%E6%87%B5%E9%80%BC%E7%9A%84%E8%AF%95%E6%92%AD%F0%9F%98%B3%F0%9F%98%B3%F0%9F%98%B3&token=308e802069f0d3c7ece29cfeec0e3b84&login_user_id=1000002231&shop=0&', version='HTTP/1.0', remote_ip='127.0.0.1', headers={'Host': '127.0.0.1:8888', 'Connection': 'close', 'Accept-Encoding': 'gzip', 'User-Agent': 'okhttp/2.4.0'})
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/site-packages/tornado-4.3-py2.7-linux-x86_64.egg/tornado/web.py", line 1443, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "./api.py", line 151, in get
+    result = mysql.Create(ownerid, resp, title, mystr, shopstr)
+  File "/root/git/workapi/api/mysql.py", line 300, in Create
+    cur.execute(sql)
+  File "/usr/lib/python2.7/site-packages/DBUtils-1.1-py2.7.egg/DBUtils/SteadyDB.py", line 631, in tough_method
+    raise error # reraise the original error again
+OperationalError: (1366, "Incorrect string value: '\\xF0\\x9F\\x98\\xB3\\xF0\\x9F...' for column 'title' at row 1")
+ERROR:tornado.access:500 GET /create?startime=2016-7-714%3A29%3A30&ownerid=1000002231&title=%E4%B8%80%E8%84%B8%E6%87%B5%E9%80%BC%E7%9A%84%E8%AF%95%E6%92%AD%F0%9F%98%B3%F0%9F%98%B3%F0%9F%98%B3&token=308e802069f0d3c7ece29cfeec0e3b84&login_user_id=1000002231&shop=0& (127.0.0.1) 108.59ms
+ERROR:tornado.application:Uncaught exception GET /create?startime=2016-7-714%3A29%3A30&ownerid=1000002231&title=%E4%B8%80%E8%84%B8%E6%87%B5%E9%80%BC%E7%9A%84%E8%AF%95%E6%92%AD%F0%9F%98%B3%F0%9F%98%B3%F0%9F%98%B3&token=308e802069f0d3c7ece29cfeec0e3b84&login_user_id=1000002231&shop=0& (127.0.0.1)
+HTTPServerRequest(protocol='http', host='127.0.0.1:8888', method='GET', uri='/create?startime=2016-7-714%3A29%3A30&ownerid=1000002231&title=%E4%B8%80%E8%84%B8%E6%87%B5%E9%80%BC%E7%9A%84%E8%AF%95%E6%92%AD%F0%9F%98%B3%F0%9F%98%B3%F0%9F%98%B3&token=308e802069f0d3c7ece29cfeec0e3b84&login_user_id=1000002231&shop=0&', version='HTTP/1.0', remote_ip='127.0.0.1', headers={'Host': '127.0.0.1:8888', 'Connection': 'close', 'Accept-Encoding': 'gzip', 'User-Agent': 'okhttp/2.4.0'})
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/site-packages/tornado-4.3-py2.7-linux-x86_64.egg/tornado/web.py", line 1443, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "./api.py", line 151, in get
+    result = mysql.Create(ownerid, resp, title, mystr, shopstr)
+  File "/root/git/workapi/api/mysql.py", line 300, in Create
+    cur.execute(sql)
+  File "/usr/lib/python2.7/site-packages/DBUtils-1.1-py2.7.egg/DBUtils/SteadyDB.py", line 631, in tough_method
+    raise error # reraise the original error again
+OperationalError: (1366, "Incorrect string value: '\\xF0\\x9F\\x98\\xB3\\xF0\\x9F...' for column 'title' at row 1")
+ERROR:tornado.access:500 GET /create?startime=2016-7-714%3A29%3A30&ownerid=1000002231&title=%E4%B8%80%E8%84%B8%E6%87%B5%E9%80%BC%E7%9A%84%E8%AF%95%E6%92%AD%F0%9F%98%B3%F0%9F%98%B3%F0%9F%98%B3&token=308e802069f0d3c7ece29cfeec0e3b84&login_user_id=1000002231&shop=0& (127.0.0.1) 107.72ms
+ERROR:tornado.application:Uncaught exception GET /create?startime=2016-7-714%3A29%3A30&ownerid=1000002231&title=%E4%B8%80%E8%84%B8%E6%87%B5%E9%80%BC%E7%9A%84%E8%AF%95%E6%92%AD%F0%9F%98%B3%F0%9F%98%B3%F0%9F%98%B3&token=308e802069f0d3c7ece29cfeec0e3b84&login_user_id=1000002231&shop=0& (127.0.0.1)
+HTTPServerRequest(protocol='http', host='127.0.0.1:8888', method='GET', uri='/create?startime=2016-7-714%3A29%3A30&ownerid=1000002231&title=%E4%B8%80%E8%84%B8%E6%87%B5%E9%80%BC%E7%9A%84%E8%AF%95%E6%92%AD%F0%9F%98%B3%F0%9F%98%B3%F0%9F%98%B3&token=308e802069f0d3c7ece29cfeec0e3b84&login_user_id=1000002231&shop=0&', version='HTTP/1.0', remote_ip='127.0.0.1', headers={'Host': '127.0.0.1:8888', 'Connection': 'close', 'Accept-Encoding': 'gzip', 'User-Agent': 'okhttp/2.4.0'})
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/site-packages/tornado-4.3-py2.7-linux-x86_64.egg/tornado/web.py", line 1443, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "./api.py", line 151, in get
+    result = mysql.Create(ownerid, resp, title, mystr, shopstr)
+  File "/root/git/workapi/api/mysql.py", line 300, in Create
+    cur.execute(sql)
+  File "/usr/lib/python2.7/site-packages/DBUtils-1.1-py2.7.egg/DBUtils/SteadyDB.py", line 631, in tough_method
+    raise error # reraise the original error again
+OperationalError: (1366, "Incorrect string value: '\\xF0\\x9F\\x98\\xB3\\xF0\\x9F...' for column 'title' at row 1")
+ERROR:tornado.access:500 GET /create?startime=2016-7-714%3A29%3A30&ownerid=1000002231&title=%E4%B8%80%E8%84%B8%E6%87%B5%E9%80%BC%E7%9A%84%E8%AF%95%E6%92%AD%F0%9F%98%B3%F0%9F%98%B3%F0%9F%98%B3&token=308e802069f0d3c7ece29cfeec0e3b84&login_user_id=1000002231&shop=0& (127.0.0.1) 112.41ms
+ERROR:tornado.application:Uncaught exception GET /create?startime=2016-08-0714%3A30%3A14&ownerid=1000002231&title=%E4%B8%80%E8%84%B8%E6%87%B5%E9%80%BC%E7%9A%84%E8%AF%95%E6%92%AD%F0%9F%98%B3%F0%9F%98%B3%F0%9F%98%B3&token=308e802069f0d3c7ece29cfeec0e3b84&login_user_id=1000002231&shop=0& (127.0.0.1)
+HTTPServerRequest(protocol='http', host='127.0.0.1:8888', method='GET', uri='/create?startime=2016-08-0714%3A30%3A14&ownerid=1000002231&title=%E4%B8%80%E8%84%B8%E6%87%B5%E9%80%BC%E7%9A%84%E8%AF%95%E6%92%AD%F0%9F%98%B3%F0%9F%98%B3%F0%9F%98%B3&token=308e802069f0d3c7ece29cfeec0e3b84&login_user_id=1000002231&shop=0&', version='HTTP/1.0', remote_ip='127.0.0.1', headers={'Host': '127.0.0.1:8888', 'Connection': 'close', 'Accept-Encoding': 'gzip', 'User-Agent': 'okhttp/2.4.0'})
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/site-packages/tornado-4.3-py2.7-linux-x86_64.egg/tornado/web.py", line 1443, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "./api.py", line 151, in get
+    result = mysql.Create(ownerid, resp, title, mystr, shopstr)
+  File "/root/git/workapi/api/mysql.py", line 300, in Create
+    cur.execute(sql)
+  File "/usr/lib/python2.7/site-packages/DBUtils-1.1-py2.7.egg/DBUtils/SteadyDB.py", line 631, in tough_method
+    raise error # reraise the original error again
+OperationalError: (1366, "Incorrect string value: '\\xF0\\x9F\\x98\\xB3\\xF0\\x9F...' for column 'title' at row 1")
+ERROR:tornado.access:500 GET /create?startime=2016-08-0714%3A30%3A14&ownerid=1000002231&title=%E4%B8%80%E8%84%B8%E6%87%B5%E9%80%BC%E7%9A%84%E8%AF%95%E6%92%AD%F0%9F%98%B3%F0%9F%98%B3%F0%9F%98%B3&token=308e802069f0d3c7ece29cfeec0e3b84&login_user_id=1000002231&shop=0& (127.0.0.1) 108.01ms
+ERROR:tornado.application:Uncaught exception GET /create (127.0.0.1)
+HTTPServerRequest(protocol='http', host='127.0.0.1:8888', method='GET', uri='/create', version='HTTP/1.0', remote_ip='127.0.0.1', headers={'Accept-Language': 'zh-cn', 'Accept-Encoding': 'deflate, gzip', 'Host': '127.0.0.1:8888', 'Accept': '*/*', 'User-Agent': 'Mozilla/5.0 (iPhone; U; CPU iPhone OS 4_0 like Mac OS X; en-us) AppleWebKit/532.9 (KHTML, like Gecko) Version/4.0.5 Mobile/8A293 Safari/6531.22.7', 'Connection': 'close'})
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/site-packages/tornado-4.3-py2.7-linux-x86_64.egg/tornado/web.py", line 1443, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "./api.py", line 127, in get
+    ownerid = int(ownerid[0])
+IndexError: list index out of range
+ERROR:tornado.access:500 GET /create (127.0.0.1) 1.84ms
+ERROR:tornado.application:Uncaught exception GET /create (127.0.0.1)
+HTTPServerRequest(protocol='http', host='127.0.0.1:8888', method='GET', uri='/create', version='HTTP/1.0', remote_ip='127.0.0.1', headers={'Accept-Language': 'zh-CN,zh;q=0.8,en-US;q=0.6,en;q=0.4', 'Accept-Encoding': 'gzip, deflate, sdch, br', 'Host': '127.0.0.1:8888', 'Accept': '*/*', 'User-Agent': 'Mozilla/5.0 (Windows NT 5.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/45.0.2454.101 Safari/537.36', 'Connection': 'close'})
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/site-packages/tornado-4.3-py2.7-linux-x86_64.egg/tornado/web.py", line 1443, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "./api.py", line 127, in get
+    ownerid = int(ownerid[0])
+IndexError: list index out of range
+ERROR:tornado.access:500 GET /create (127.0.0.1) 0.95ms
+ERROR:tornado.application:Uncaught exception GET /create (127.0.0.1)
+HTTPServerRequest(protocol='http', host='127.0.0.1:8888', method='GET', uri='/create', version='HTTP/1.0', remote_ip='127.0.0.1', headers={'Accept-Language': 'zh-CN,zh;q=0.8,en-US;q=0.6,en;q=0.4', 'Accept-Encoding': 'gzip, deflate, sdch, br', 'Host': '127.0.0.1:8888', 'Accept': '*/*', 'User-Agent': 'Mozilla/5.0 (Windows NT 5.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/45.0.2454.101 Safari/537.36', 'Connection': 'close'})
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/site-packages/tornado-4.3-py2.7-linux-x86_64.egg/tornado/web.py", line 1443, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "./api.py", line 127, in get
+    ownerid = int(ownerid[0])
+IndexError: list index out of range
+ERROR:tornado.access:500 GET /create (127.0.0.1) 0.72ms
+ERROR:tornado.application:Uncaught exception GET /create (127.0.0.1)
+HTTPServerRequest(protocol='http', host='127.0.0.1:8888', method='GET', uri='/create', version='HTTP/1.0', remote_ip='127.0.0.1', headers={'Accept-Language': 'zh-cn', 'Accept-Encoding': 'deflate, gzip', 'Host': '127.0.0.1:8888', 'Accept': '*/*', 'User-Agent': 'Mozilla/5.0 (iPhone; U; CPU iPhone OS 4_0 like Mac OS X; en-us) AppleWebKit/532.9 (KHTML, like Gecko) Version/4.0.5 Mobile/8A293 Safari/6531.22.7', 'Connection': 'close'})
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/site-packages/tornado-4.3-py2.7-linux-x86_64.egg/tornado/web.py", line 1443, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "./api.py", line 127, in get
+    ownerid = int(ownerid[0])
+IndexError: list index out of range
+ERROR:tornado.access:500 GET /create (127.0.0.1) 0.74ms
+ERROR:tornado.application:Uncaught exception GET /create (127.0.0.1)
+HTTPServerRequest(protocol='http', host='127.0.0.1:8888', method='GET', uri='/create', version='HTTP/1.0', remote_ip='127.0.0.1', headers={'Accept-Language': 'zh-cn', 'Accept-Encoding': 'deflate, gzip', 'Host': '127.0.0.1:8888', 'Accept': '*/*', 'User-Agent': 'Mozilla/5.0 (iPhone; U; CPU iPhone OS 4_0 like Mac OS X; en-us) AppleWebKit/532.9 (KHTML, like Gecko) Version/4.0.5 Mobile/8A293 Safari/6531.22.7', 'Connection': 'close'})
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/site-packages/tornado-4.3-py2.7-linux-x86_64.egg/tornado/web.py", line 1443, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "./api.py", line 127, in get
+    ownerid = int(ownerid[0])
+IndexError: list index out of range
+ERROR:tornado.access:500 GET /create (127.0.0.1) 1.46ms
+ERROR:tornado.application:Uncaught exception GET /create (127.0.0.1)
+HTTPServerRequest(protocol='http', host='127.0.0.1:8888', method='GET', uri='/create', version='HTTP/1.0', remote_ip='127.0.0.1', headers={'Accept-Language': 'zh-cn', 'Accept-Encoding': 'deflate, gzip', 'Host': '127.0.0.1:8888', 'Accept': '*/*', 'User-Agent': 'Mozilla/5.0 (iPhone; U; CPU iPhone OS 4_0 like Mac OS X; en-us) AppleWebKit/532.9 (KHTML, like Gecko) Version/4.0.5 Mobile/8A293 Safari/6531.22.7', 'Connection': 'close'})
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/site-packages/tornado-4.3-py2.7-linux-x86_64.egg/tornado/web.py", line 1443, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "./api.py", line 127, in get
+    ownerid = int(ownerid[0])
+IndexError: list index out of range
+ERROR:tornado.access:500 GET /create (127.0.0.1) 2.00ms
+ERROR:tornado.application:Uncaught exception GET /create (127.0.0.1)
+HTTPServerRequest(protocol='http', host='127.0.0.1:8888', method='GET', uri='/create', version='HTTP/1.0', remote_ip='127.0.0.1', headers={'Accept-Language': 'zh-CN,zh;q=0.8,en-US;q=0.6,en;q=0.4', 'Accept-Encoding': 'gzip, deflate, sdch, br', 'Host': '127.0.0.1:8888', 'Accept': '*/*', 'User-Agent': 'Mozilla/5.0 (Windows NT 5.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/45.0.2454.101 Safari/537.36', 'Connection': 'close'})
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/site-packages/tornado-4.3-py2.7-linux-x86_64.egg/tornado/web.py", line 1443, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "./api.py", line 127, in get
+    ownerid = int(ownerid[0])
+IndexError: list index out of range
+ERROR:tornado.access:500 GET /create (127.0.0.1) 0.70ms
+ERROR:tornado.application:Uncaught exception GET /create (127.0.0.1)
+HTTPServerRequest(protocol='http', host='127.0.0.1:8888', method='GET', uri='/create', version='HTTP/1.0', remote_ip='127.0.0.1', headers={'Accept-Language': 'zh-CN,zh;q=0.8,en-US;q=0.6,en;q=0.4', 'Accept-Encoding': 'gzip, deflate, sdch, br', 'Host': '127.0.0.1:8888', 'Accept': '*/*', 'User-Agent': 'Mozilla/5.0 (Windows NT 5.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/45.0.2454.101 Safari/537.36', 'Connection': 'close'})
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/site-packages/tornado-4.3-py2.7-linux-x86_64.egg/tornado/web.py", line 1443, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "./api.py", line 127, in get
+    ownerid = int(ownerid[0])
+IndexError: list index out of range
+ERROR:tornado.access:500 GET /create (127.0.0.1) 0.74ms
+ERROR:tornado.application:Uncaught exception GET /create (127.0.0.1)
+HTTPServerRequest(protocol='http', host='127.0.0.1:8888', method='GET', uri='/create', version='HTTP/1.0', remote_ip='127.0.0.1', headers={'Accept-Language': 'zh-CN,zh;q=0.8,en-US;q=0.6,en;q=0.4', 'Accept-Encoding': 'gzip, deflate, sdch, br', 'Host': '127.0.0.1:8888', 'Accept': '*/*', 'User-Agent': 'Mozilla/5.0 (Windows NT 5.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/45.0.2454.101 Safari/537.36', 'Connection': 'close'})
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/site-packages/tornado-4.3-py2.7-linux-x86_64.egg/tornado/web.py", line 1443, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "./api.py", line 127, in get
+    ownerid = int(ownerid[0])
+IndexError: list index out of range
+ERROR:tornado.access:500 GET /create (127.0.0.1) 0.62ms
