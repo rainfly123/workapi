@@ -1,0 +1,423 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title></title>
+    <link href="css/mui.min.css" rel="stylesheet" />
+    <link href="css/lucida.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="css/sp_share.css">
+    <link rel="stylesheet" type="text/css" href="css/swiper.min.css">
+    <link href="css/vison.css" rel="stylesheet" />
+    <style>
+        body{background-color:#333;}
+        .mui-content{background-color:#333;}
+        .mui-bar .mui-btn-nav.mui-pull-right { color:#fff;}
+        .mui-bar-nav.mui-bar .mui-icon {padding-right: 0px;}
+        .zb_mypic{display:block;width:30px;height:30px;margin-top:7px;border-radius:50%;object-fit: cover;}
+        .mui-bar .mui-icon {font-size: 24px;position: relative;z-index: 20;padding-top: 0px;padding-bottom: 10px;}
+        .zb_title{padding:0 10px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+        .zb_right{height:44px;line-height:44px;}
+        .mui-bar .mui-icon{font-size:2rem;}
+
+        .container{
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            font-family: 'Microsoft YaHei', sans-serif;
+            position: relative;
+            min-width: 320px;
+            max-width: 640px;
+            margin: 0 auto;
+        }
+        html,
+        body,
+        .container {
+            height: 100%;
+            width: 100%;
+            overflow: hidden;
+        }
+
+        ul,li{list-style:none;}
+        body{background-color:#333;}
+        p {
+            font-size: 14px;
+            margin-top: 0;
+            margin-bottom: 0px;
+            color: #fff;
+        }
+        .mui-content{background-color:#333;}
+
+        .live-room-info {
+            position: absolute;
+            z-index: 20;
+            left: 5px;
+            top: 10px;
+            color: #fff;
+        }
+
+        .live-room-info .head {
+            width: 30px;
+            height:30px;
+            border-radius: 50%;
+            float: left;
+            border: 2px solid #fff;
+            margin-right: 8px;
+        }
+        .live-room-info .detail {
+            float: left;
+        }
+        .live-room-info .detail p {
+            line-height: 15px;
+            height: 15px;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+        }
+        .live-room-info .detail .name {
+            font-size: 10px;
+        }
+        .live-room-info .detail .count {
+            font-size: 10px;
+        }
+        .clearfix:before,.clearfix:after{content:" ";display:table}
+        .clearfix:after{clear:both}
+        .mui-pull-right{
+            position: absolute;
+            z-index: 20;
+            right: 5px;
+            top: 10px;
+            color: #666;
+            line-height:30px;
+            font-size:2rem;
+        }
+        .mui-popup-button {
+            color: #fdb559;
+        }
+
+        .mui-grid-view.mui-grid-9 {
+            margin: 0;
+            padding: 0;
+            border-top: 0px solid #333;
+            border-left: 0px solid #333;
+            background-color: #333;
+        }
+        .mui-grid-view.mui-grid-9 .mui-table-view-cell {
+            margin: 0;
+            padding: 11px 15px;
+            vertical-align: top;
+            border-right: 0px solid #eee;
+            border-bottom: 0px solid #eee;
+        }
+
+        .mui-grid-view.mui-grid-9 .mui-table-view-cell.mui-active
+        {
+            background-color: #333;
+        }
+
+        .show .chat{
+            width: 100%;
+            margin:10px 0;
+            max-height: 150px;
+            overflow-y: scroll;
+            z-index: 11;
+        }
+        .show .chat p{
+            font-size: 15px;
+            color: #fff;
+            text-shadow: 2px 2px 2px #333;
+            padding: 0 10px;
+            margin: 0;
+        }
+        .show .chat p span{ color: #dedede;}
+        .show .chat p:last-child{
+            border-bottom: 0px;
+        }
+
+        .show .ipt-wrap{
+            width: 100%;
+            height: 42px;
+            position: absolute;
+            box-sizing: border-box;
+            padding-left: 5px;
+            bottom: 0;
+        }
+
+        .show .btn-wrap ul li {
+            width: 50%;
+            float: left;
+            text-align: center;
+        }
+
+        .sp_gift{width:100%;}
+        .sp_gift li a{background: no-repeat 0 0;display:block;width:50px;height:50px;}
+        .sp_gift li a.gift1{background-position: -20px -10px;}
+        .sp_gift li a.gift2{background-position: -90px -10px;}
+        .sp_gift li a.gift3{background-position: -160px -10px;}
+        .sp_gift li a.gift4{background-position: -230px -10px;}
+        .sp_gift li a.gift5{background-position: -300px -10px;}
+        .sp_gift li a.gift6{background-position: -370px -10px;}
+        .sp_gift li span{color:#fdb559;font-size:0.8rem;}
+
+        .mui-grid-view.mui-grid-9 .mui-table-view-cell.this_gift{border:2px solid #fdb559;}
+
+        .mui-slider-indicator {
+            position: absolute;
+            bottom: 33px;
+            width: 100%;
+            text-align: center;
+            background: 0 0;
+        }
+
+        .sp_tomoney{padding:20px 5px 5px 5px;}
+        .sp_tomoney .sp_send{float:right;background-color:#fdb559;border:none;color:#fff;}
+
+
+        /* share */
+        .am-share { font-size: 14px; border-radius: 0; bottom: 0; left: 0; position: absolute; text-align: center; -webkit-transform: translateY(100%); -ms-transform: translateY(100%); transform: translateY(100%); -webkit-transition: -webkit-transform 300ms; transition: transform 300ms ; width: 100%; z-index: 1110; }
+        .am-modal-active { transform: translateY(0px);  -webkit-transform: translateY(0); -ms-transform: translateY(0); transform: translateY(0) }
+        .am-modal-out { z-index: 1109; -webkit-transform: translateY(100%); -ms-transform: translateY(100%); transform: translateY(100%) }
+
+        .am-share-footer { margin: 0px; }
+        .am-share-footer .share_btn { color: #666;  display: block; width: 100%; background-color: #fff; border: 0px solid #e6e6e6; border-radius: 0; cursor: pointer;  font-size: 16px; font-weight: 400; line-height: 50px; text-align: center; transition: background-color 300ms ease-out 0s, border-color 300ms ease-out 0s; vertical-align: middle; white-space: nowrap; }
+
+        .am-share-sns { background-color: #f8f8f8;padding-top: 15px; height:auto; zoom:1; overflow:auto; border-bottom: 1px solid #fdb559;box-shadow: 0 1px 1px #ccc; }
+
+        .am-share-sns li { margin-bottom: 15px; display: block; float: left; height: auto;  width: 20%; }
+
+        .am-share-sns a { color: #555; display: block; text-decoration:none; }
+        .am-share-sns span { display: block; }
+
+        .am-share-sns li i { background-image: url(images/splive/shareicon.png);background-position: 0 0; background-repeat: no-repeat;color: #fff; display: inline-block; font-size: 18px;width: 50px;height: 50px;margin-bottom: 5px;border-radius:10px;}
+        .am-share-sns .share-icon-weibo {background-position:-66px -351px;}
+        .am-share-sns .share-icon-weixin {background-position:-529px -65px;}
+        .am-share-sns .share-icon-qq {background-position:-66px -64px;}
+        .am-share-sns .share-icon-pengyouquan {background-position:-298px -350px;}
+        .am-share-sns .share-icon-zone {background-position:-182px -65px;}
+
+        .sharebg { background-color: rgba(0, 0, 0, 0.6); bottom: 0; height: 100%; left: 0; opacity: 0; position: fixed; right: 0; top: 0; width: 100%; z-index: 1100; display:none; }
+        .sharebg-active { opacity: 1; display:block; }
+		
+		.sp_look{height:40px;line-height:40px;background-color:#ddd;padding:0 10px;}
+		.sp_look .sp_audience{float:left;}
+		.sp_look .getlaud{float:right;}
+		.getlaud img{margin:5px 0;width:30px;height:30px;}
+		.getlaud .laudnum{line-height:30px;color:#fdb559;}
+		
+		
+    </style>
+
+</head>
+<body>
+<header class="mui-bar mui-bar-nav">
+    <img id="player" class="mui-pull-left zb_mypic" src='images/41257cb06986d7bdd692bbb8305636d0.jpg'/>
+
+    <a class="mui-action-back mui-icon mui-icon-closeempty mui-pull-right zb_right"></a>
+
+    <h1 id='title' class="mui-pull-left mui-title zb_title"></h1>
+</header>
+<div class="mui-content container">
+    <div class="show">
+
+        <div id="video_player"></div>
+
+        <!-- <video id="video_id"  width="100%" height="250" webkit-playsinline="true" x-webkit-airplay="true" preload="auto" poster="" controls loop="loop">
+            <source src="" id="video_source" />
+        </video> -->
+        <!--<video autoplay="" webkit-playsinline="true" x-webkit-airplay="true" width="100%" height="100%" preload="auto" poster="images/splive/sp_testgirl.png" src=""></video>-->
+        <!--<video width="1" height="1" controls loop="loop" src="<%=src%>"></video>-->
+		
+		<!-- 观看/点赞 -->
+		<div class="sp_look">
+			<div class="sp_audience">
+				<span id="persons"></span>
+			</div>
+			
+			<div id='' class="getlaud">
+				<img id="sp_getlaud" onclick="getlaud()" src="images/splive/laud.png" />
+				<span id="laud" class="laudnum">0</span>
+			</div>	
+			<div style="clear:both;"></div>
+		</div>
+		
+        <!-- 底部菜单栏 -->
+        <div class="btn-wrap">
+        <a href="http://www.66boss.com/app/download.html" > APP 下载 </a>
+        </div>
+
+
+
+
+
+    </div>
+</div>
+
+<script src="js/mui.min.js"></script>
+<script src="js/app.js"></script>
+<script type="text/javascript" src="js/swiper.min.js"></script>
+<script type="text/javascript" src="js/jquery-1.8.3.min.js" ></script>
+<script type="text/javascript" src="js/sp_conn.js" ></script>
+<script type="text/javascript" src="js/clappr.min.js"></script>
+
+<script>
+    mui.init({});
+</script>
+<script>
+    var ws;
+    $(document).ready(function(){
+        $('.barrage').tap(function(){
+            $(this).hasClass('open')?$(this).removeClass('open'):$(this).addClass('open');
+        });
+        $('.messages').tap(function(){
+            $('.btn-wrap').hide();
+            $('.ipt-wrap').show();
+            $('.show-ipt').focus();
+        });
+
+        $('video').tap(function(){
+            $('.btn-wrap').hide();
+            $('.mui-slider').show();
+        });
+
+        $('video').tap(function(){
+            if($('.p-info').hasClass('sh')){
+                $('.p-info').removeClass('sh');
+            }else{
+                $('.btn-wrap').show();
+                $('.ipt-wrap').hide();
+                $('.mui-slider').hide();
+            }
+        });
+        $('#player').tap(function(){
+            $('.p-info').show().addClass('sh');
+        });
+
+        $('.show .chat').on('click','#user_info',function(){
+            $('.p-info').show().addClass('sh');
+        })
+        $('.forhide').tap(function(){
+            $('.p-info').hide();
+        });
+
+        $(".mui-slider ul li").click(function(){
+            $(this).addClass("this_gift").siblings().removeClass("this_gift");
+        })
+		
+		//点赞效果
+		$.extend({
+			tipsBox: function (options) {
+				options = $.extend({
+					obj: null, 
+					str: "+1",  
+					startSize: "10px", 
+					endSize: "50px",    
+					interval: 600,  
+					color: "red",  
+					callback: function () { }    //回调函数
+				}, options);
+				$("body").append("<span class='laud'>" + options.str + "</span>");
+				var box = $(".laud");
+				var left = options.obj.offset().left + options.obj.width() / 2;
+				var top = options.obj.offset().top - options.obj.height();
+				box.css({
+					"position": "absolute",
+					"left": left + "px",
+					"top": top + "px",
+					"z-index": 9999,
+					"font-size": options.startSize,
+					"line-height": options.endSize,
+					"color": options.color
+				});
+				box.animate({
+					"font-size": options.endSize,
+					"opacity": "0",
+					"top": top - parseInt(options.endSize) + "px"
+				}, options.interval, function () {
+					box.remove();
+					options.callback();
+				});
+			}
+		});
+		
+		$("#sp_getlaud").click(function () {
+			$.tipsBox({
+				obj: $(this),
+				str: "+1",
+				callback: function () {
+				}
+			});
+		});
+
+		
+	    //读取直播信息
+	    $.getUrlParam = function (name) {
+	        var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+	        var r = window.location.search.substr(1).match(reg);
+	        if (r != null)
+	            return unescape(r[2]);
+	        return null;
+	    }
+        $.get('http://live.66boss.com/api/detail?liveid=' + $.getUrlParam('live_id'), {}, function(data){
+            var live_detail = eval('(' + data + ')');
+            //$('#title').html(live_detail['title']);
+            $('#persons').html(live_detail['persons'] + '人观看');
+
+            var srcStr;
+
+            if(live_detail['state'] == 2){
+
+                $('#title').html(live_detail['title']);
+                srcStr = live_detail['playback_hls_url'];
+
+            }else if(live_detail['state'] == 1){
+                //直播观看地址
+                $('#title').html(live_detail['title']);
+                srcStr = live_detail['hls_live_url'];
+            }
+            else {
+              var ccc = "直播还未开始，敬请等待 预计开始时间:" + live_detail['startime'];
+              $('#title').html(ccc);
+            }
+
+            //alert(srcStr)
+
+            var player = new Clappr.Player({source: srcStr,width: document.body.clientWidth, parentId: "#video_player"});
+
+        })
+        if (!window.WebSocket)
+	    {
+	        alert("WebSocket not supported by this browser!");
+	    }
+    //    connect($.getUrlParam('live_id'), $.getUrlParam('user_id'))
+    	//connect($.getUrlParam('live_id'), Date.parse(new Date()), Date.parse(new Date()));
+    });
+	$(function(){
+		document.onkeydown = function(e){ 
+		    var ev = document.all ? window.event : e;
+		    if(ev.keyCode==13) {
+		           sendTalkingMsg();
+		    }
+		}
+	}); 
+
+    /*
+     * 观众点赞
+     */
+    function click_support(live_id){
+        $.get('http://live.66boss.com/api/support?liveid=' + live_id, {}, function(){
+            //点赞完成
+        })
+    }
+
+	//点赞+1
+	function getlaud(){
+        click_support($.getUrlParam('live_id'));
+		var temp = $("#laud").html();
+		temp++;
+		$("#laud").html(temp);
+	}
+
+</script>
+</body>
+</html>
+
+
+
