@@ -6,17 +6,21 @@ import (
         "strings"
         "sync"
         "fmt"
+        "os"
 )
 import "database/sql"
 import _ "github.com/go-sql-driver/mysql"
 import "net/http"
 import "io"
 
+
 const (
     ACCESS_KEY = "_x8qeD4FD5BGveRZ3SC_2_7StAUl_T7O9Sxz-e9X"
     SECRET_KEY = "mIEuQoIsUHw5eEgMhESAoDmQDXiw7tQVApcKue-E"
     HUB_NAME   = "66boss" 
     PUBLISH_KEY = "7cf0e739-8f53-4264-bea2-72aee33218e7"
+    UPLOAD_VIDEO_PATH string = "/live/www/html/weibo_video/"
+    ACCESS_VIDEO_URL  string = "http://livecdn.66boss.com/weibo_video/"
 )
 
 var chans map[string]int64;
@@ -139,17 +143,25 @@ func check_live_state(liveid string){
 
     offline  := 0
     for {
-        //generate snapshot
-        name := "snapshot.jpg" 
-        format := "jpg"        
-        options := pili.OptionalArguments{}
-        snapshotRes, err := stream.Snapshot(name, format, options)
-        if err != nil {
-            fmt.Println("Error:", err)
+        filename := UPLOAD_VIDEO_PATH + liveid
+        _, exist := os.Stat(filename)
+       
+        if exist == nil {
+            access_url := ACCESS_VIDEO_URL + liveid
+            updateMysqlSnapshot(liveid, access_url)  //update snapshot
+        } else {
+            //generate snapshot
+            name := "snapshot.jpg" 
+            format := "jpg"        
+            options := pili.OptionalArguments{}
+            snapshotRes, err := stream.Snapshot(name, format, options)
+            if err != nil {
+                fmt.Println("Error:", err)
+            }
+            fmt.Println("Stream Snapshot:\n", snapshotRes)
+            //write mysql
+            updateMysqlSnapshot(liveid, snapshotRes.TargetUrl)  //update snapshot
         }
-        fmt.Println("Stream Snapshot:\n", snapshotRes)
-        //write mysql
-        updateMysqlSnapshot(liveid, snapshotRes.TargetUrl)  //update snapshot
         time.Sleep(time.Second * 60)
 
         streamStatus, err := stream.Status()
